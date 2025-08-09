@@ -23,6 +23,13 @@ body {
     line-height: 1.6;
 }
 
+/* Constrain content width on larger screens */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 header {
     background-color: var(--blue);
     color: var(--text-light);
@@ -128,6 +135,71 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+}
+
+/* About list styling */
+.about-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+.about-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+.about-list li::before {
+    content: '\2022'; /* bullet dot */
+    color: var(--tan);
+    position: absolute;
+    left: 0;
+}
+
+/* Video gallery and placeholders */
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.video-placeholder {
+    flex: 1 1 20rem;
+    background-color: var(--light-bg);
+    border: 2px dashed var(--tan);
+    border-radius: 0.25rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tan);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Documentation video gallery images */
+.video-gallery img {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Cone Denim section styling */
+#cone {
+    background-color: #f7f1e8; /* light tan backdrop to highlight sponsorship content */
+    border-top: 4px solid var(--tan);
+    border-bottom: 4px solid var(--tan);
+}
+
+#cone h3 {
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--blue);
+}
+
+#cone h2 {
+    margin-top: 0;
 }
 
 /* Responsive adjustments */
